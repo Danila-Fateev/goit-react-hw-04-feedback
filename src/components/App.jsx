@@ -61,7 +61,7 @@ export class App extends Component {
               neutral={neutral}
               bad={bad}
               total={total}
-              posFeedback={this.countPositiveFeedbackPercentage()}
+              positiveFeedback={this.countPositiveFeedbackPercentage()}
             />
           )}
         </Section>

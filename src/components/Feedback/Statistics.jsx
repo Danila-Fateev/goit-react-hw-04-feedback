@@ -1,7 +1,7 @@
 import styles from './Feedback.module.css';
 import PropTypes from 'prop-types';
 
-function Feedback({ good, bad, neutral, total, posFeedback }) {
+function Feedback({ good, bad, neutral, total, positiveFeedback }) {
   return (
     <div>
       <ul className={styles.list}>
@@ -9,7 +9,7 @@ function Feedback({ good, bad, neutral, total, posFeedback }) {
         <li>Neutral: {neutral}</li>
         <li>Bad: {bad}</li>
         <li>Total: {total}</li>
-        <li>Positive feedback: {total === 0 ? '0' : posFeedback}%</li>
+        <li>Positive feedback: {total === 0 ? '0' : positiveFeedback}%</li>
       </ul>
     </div>
   );
