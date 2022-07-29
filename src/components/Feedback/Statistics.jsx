@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 function Feedback({ good, bad, neutral, total, posFeedback }) {
   return (
     <div>
-      <h2>Statistics</h2>
       <ul className={styles.list}>
         <li>Good: {good}</li>
         <li>Neutral: {neutral}</li>

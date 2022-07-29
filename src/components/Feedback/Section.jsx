@@ -1,12 +1,11 @@
 import PropTypes from 'prop-types';
 
-export default function Section({ title, feedback, stats }) {
+export default function Section({ title, children }) {
   return (
-    <>
+    <section>
       <h2>{title}</h2>
-      {feedback}
-      {stats}
-    </>
+      {children}
+    </section>
   );
 }
 

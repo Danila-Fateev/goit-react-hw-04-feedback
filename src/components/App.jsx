@@ -45,23 +45,23 @@ export class App extends Component {
           color: '#010101',
         }}
       >
-        <Section
-          title="Please leave feedback"
-          feedback={<FeedbackOptions onLeaveFeedback={this.onLeaveFeedback} />}
-          stats={
-            total === 0 ? (
-              <Notification message="There is no feedback" />
-            ) : (
-              <Statistics
-                good={good}
-                neutral={neutral}
-                bad={bad}
-                total={total}
-                posFeedback={this.countPositiveFeedbackPercentage()}
-              />
-            )
-          }
-        />
+        <Section title="Please leave feedback">
+          <FeedbackOptions onLeaveFeedback={this.onLeaveFeedback} />
+        </Section>
+
+        <Section title="Statistics">
+          {total === 0 ? (
+            <Notification message="There is no feedback" />
+          ) : (
+            <Statistics
+              good={good}
+              neutral={neutral}
+              bad={bad}
+              total={total}
+              posFeedback={this.countPositiveFeedbackPercentage()}
+            />
+          )}
+        </Section>
       </div>
     );
   }
