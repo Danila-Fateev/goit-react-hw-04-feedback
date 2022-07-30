@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 
 export default function Section({ title, children }) {
+  console.log(children);
   return (
     <section>
       <h1>{title}</h1>
@@ -10,7 +11,6 @@ export default function Section({ title, children }) {
 }
 
 Section.protoTypes = {
-  title: PropTypes.string,
-  feedback: PropTypes.func.isRequired,
-  stats: PropTypes.func.isRequired,
+  title: PropTypes.string.isRequired,
+  children: PropTypes.object.isRequired,
 };

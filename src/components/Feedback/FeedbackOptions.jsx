@@ -5,8 +5,8 @@ function FeedbackOptions({ options, onLeaveFeedback }) {
   return (
     <>
       <ul className={styles.btnList}>
-        {options.map(el => (
-          <li>
+        {options.map((el, index) => (
+          <li key={index}>
             <button className={styles.btn} name={el} onClick={onLeaveFeedback}>
               {el}
             </button>
@@ -20,5 +20,6 @@ function FeedbackOptions({ options, onLeaveFeedback }) {
 export default FeedbackOptions;
 
 FeedbackOptions.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.string.isRequired),
   onLeaveFeedback: PropTypes.func.isRequired,
 };
