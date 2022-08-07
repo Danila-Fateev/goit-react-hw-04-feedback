@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 
 export default function Section({ title, children }) {
-  console.log(children);
   return (
     <section>
       <h1>{title}</h1>
